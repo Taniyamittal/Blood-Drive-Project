@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21 Mar, 2021, 4:14:10 PM
+    Author     : panki
+*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(to top, #c00606 0%, #f7dada 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+}
+
+#regForm {
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.register
+{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px #0000004d;
+    width: 520px;
+    padding: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.register h2{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #c00606;
+    text-shadow: 0.5px 0.75px #960606ee;
+}
+
+.info
+{
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+}
+
+.info label{
+    color: #000;  /*#383737*/
+    display: block;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+.info input, select{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.register button{
+    cursor: pointer;
+    background-color: #c00606;
+    border: 2px solid #c00606;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 2px 4px #303030;
+    font-weight: 600;
+    outline: none;
+}
+
+.register button:hover {
+    background: #9c0606;
+    color: #ccc;
+}
+
+.register button:active {
+    border: 1px solid #999;
+}
+
+
+.error {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+
+

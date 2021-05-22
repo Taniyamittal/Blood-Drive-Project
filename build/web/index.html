@@ -1,0 +1,49 @@
+<%-- 
+    Document   : newjsp
+    Created on : 12 Mar, 2021, 8:40:22 PM
+    Author     : panki
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%@ page import="java.io.*,java.util.*,javax.mail.* "%>
+<%@ page import="javax.mail.internet.*,javax.activation.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+
+<%
+    String result;
+    String to="taniyamittal2000@gmail.com";
+    String from = "BloodBank21234";
+    String pass = "Blood@123";
+    String host="localhost";
+    Properties properties = System.getProperties(); 
+    properties.setProperty("mail.smtp.host", host); 
+    properties.setProperty("mail.user",from);
+    properties.setProperty("mail.password", pass);
+    properties.put("mail.smtp.port", "587");
+    properties.put("mail.smtp.starttls.enable", "true");
+    Session mailSession = Session.getDefaultInstance(properties);
+    
+    try{
+        MimeMessage message = new MimeMessage(mailSession); 
+        message.setFrom(new InternetAddress(from));
+        message.addRecipient(Message.RecipientType.TO, new InternetAddress(to)); 
+        message.setSubject("This is the Subject Line!");
+        message.setContent("<h1>This messageis actual </h1>", "text/html" ); 
+        Transport.send(message); 
+        result = "Succesfully send the message....";
+
+
+    }catch(Exception e){ out.println(e);
+    result = "UnSuccesfully send the message....";
+    }
+
+
+%>
+
+<title>Sending Mail in JSP</title>
+
+<h1><center><font color="blue">Sending Mail Using JSP</font></h1>
+
+<b><center><font color="red"><% out.println("gi");%></b>
+        
